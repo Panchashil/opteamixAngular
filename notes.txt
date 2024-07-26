@@ -1,0 +1,90 @@
+25/7/24 
+
+*What is Angular: 
+
+*technology must know 
+html,css,bootstrap,javascript,typescript
+*software pre-requisit 
+-nodejs
+node -v  //display node version
+-npm
+npm -v //display npm version
+-typescript 
+npm install -g typescript // to install typescript 
+tsc -v      // display typescript version
+
+*how to install angular 
+npm install -g @angular/cli 
+ng version      //display angular version 
+
+*explain folder structure 
+*what is component : component is partial part of angulae which we can reuse multiple time , 
+how to create component
+
+ng generate component componentname
+ng generate component components/databinding
+ng generate component components/directive
+
+*how to display component output by writting its selector name.
+
+*Databinding : in this we can access data from one file to another (html <=> ts)
+1.Interpolation {{}} : ts => html  
+2.property []: ts => html (here we set attribute)
+3.event binding (): html => ts 
+4.two-way databinding [()]: ts <=>html :to perform two way databinding we use ngModel directory , but ngModel directory is not part of core angular it is part of FormsModule , first we have to import FormsModule then we can use ngModel directory.
+
+-How to access image in angular project 
+
+Task: Toggle image task 
+
+==============================
+26/7/24
+
+
+Task : toggle Image (ancilla,shweta,poornima,pravin,pooja aananda)
+
+ng g c Task/toggleimg 
+
+*How to access images and multimedia file 
+*how to access constant data 
+
+*directive : it is use to chnage DOM element layout as well as change appearance and behavior of it.
+from angular 18 to use directive first we have to import CommanModule in component.
+
+1.Structural Directives :-it is use to change DOM element layout.
+                         -Structural directive denoted by astric symbol(*).
+                         -*ngIf,*ngFor,*ngSwitchCase 
+                         -we can use single directive to a single DOM element.
+
+2.Attribute Directives: it is use to change appearance and behavior of DOM element.
+                       -here we use ngStyle and ngClass.
+                       ngStyle: it is use to apply css property condition.
+                       ngClass: it is use to apply css class condition.
+
+3.custome Directive : directice developed by developer.
+
+ng-template directive : ngtemplate directive disply DOM element on the basis condition only.
+
+
+Task: in task folder you have create component with name selectCourse in this there will be two list 
+      FrontEnd Course.   2.Backend Course.
+
+*how to use bootstrap in angular 
+use bootstrap by downloadind 
+step1:npm i bootstrap
+step2: go to angular.json file and import its in style array
+step3: restart angular project 
+
+*Pipe : in angular pipe will tranform property with chanaging its orinal value.
+       -in angular pipe is denoted by | 
+       to use it import CommanModule in respexctive component
+       there are three types of pipe 
+       1.inbuilt pipe : pipe provided by angular 
+       2.custome pipe : pipe developed by developer 
+       3.thiredparty pipe: pipe already developed by thiredparty vender which we need to install it first and then use it.
+
+
+ng g c components/angularpips
+    
+
+

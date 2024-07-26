@@ -1,0 +1,17 @@
+
+.txtprimary{
+    color: blue;
+    background-color: rgb(217, 255, 0);
+    font-family: cursive;
+}
+.txtdanger{
+    color: red;
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.special:hover{
+    color: brown;
+    background-color: lightcyan;
+    font-size: 30px;
+}
+
