@@ -1,0 +1,17 @@
+
+
+
+<form  [formGroup]="userform">
+    <div class="row">
+        <div class="col-sm-6">
+            <label class="form-label">Enter User Name:</label>
+            <input type="text" name="userName" formControlName="userName" class="form-control">
+            <div class="alert alert-danger" *ngIf="userform.get('userName').invalid && userform.get('userName').touched">
+               <div *ngIf="userform.get('userName').errors.required">this field is required</div>
+               <div *ngIf="userform.get('userName').errors.pattern">User name must contaon only character</div>
+            </div>
+        </div>
+
+    </div>   
+
+</form>

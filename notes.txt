@@ -85,6 +85,172 @@ step3: restart angular project
 
 
 ng g c components/angularpips
-    
+==============================================
+27/7/2024
+
+Task multiple img:pooja k, pravin , rajeev,shwethashree,ancilla,nithya,poornima,surya,
+Task directive:pravin,ancilla,nithya
+
+*to display date time javascript first we have to object of data class 
+*how to create custome pipe 
+ng generate pipe pipename 
+
+ng g pipe shared/cutomePipe/mycube
+ng g pipe shared/cutomePipe/mygender
+
+Task:  generate a pipe with name mysquare which will reqturn square of any number
+Task:  generate a pipe with name areaofcircle which will reqturn areaofcircle of any number
+
+two pipe : poornima 
+
+*component Interaction : fetching data from one component to another.
+                        -to fetch data from one component to another they must parent child relation.
+                       -to make parent child reation inbetween component we have wtite child component selector as tag in parent component html file.
+
+*Input() decorator : get data from parent component to child
+*Output() decorator: get data from child component to parent
+
+*Routing : navigation of component to display its view or output by writting component routing path name in browser url.
+-in angular to perform routing we have root routing file with app.routing.ts 
+-routing contain array of object 
+-we get output or view of all routing component under router-outlet directory
+
+1.naming routing: write path name in browser url to display component output
+2.default routing: display component output when path is blanck.
+3.re-direct routing: when we have to diplay component output by writting diffrent path name  
+4.parameterize routing:display component output only parameter will passwith routing path.
+5.child routing : defining one routing inside another routing.
+                   -to display output of child routing component we have add router-outlet directory in parent component html file.
+
+6.wild card routing(**): when user enter wrong path it will display component output.
+                        -wild card routing must be last routing, if we define routing bello to it, it will never work.
+
+create component with name nav,footer,login,maindashboard,pagenotfound inside layout folder
+ng g c layout/nav
+
+create component with name udtdf , rtf ,angForm in angularForm folder
+ng g c angularForm/utdf
+
+*Form Validation In Angular 
+-thee are two ways to perform form vation in angular 
+-to perform form validation we have to import FormsModule in component.
+
+1.UDTF(User Template Driven Form):
+-when we have simple and small validation form in that case we it.
+-in this validation code will reside in html file 
+-here we use ngForm
+
+2.RTF(React Template):
+ -when you need to write complex validation for form 
+ -in this validation will reside in ts file 
+ -to perform we have import ReactiveFormModule from angular form 
+ -in this we use two class 1.FormGroup class, 2.FormControl 
+ 1.FormGroup : it hold data for all form control
+ 2.FormControl : it track status and hold value of individual input control 
+
+
+visited input control       ng-untouched       ng-touched
+chnage input control value  ng-pristine       ng-dirty 
+formcontrol empty          invlid            valid 
+
+======================================================================
+28/7/24
+
+screen width >= 1200px  xl
+screen width >= 992px   lg
+screen width >= 768px   md 
+screen width >= 576px   sm 
+
+
+
+grid : here we use two classes .row, .col 
+      -in grid row we can create columan with 12 size.
+
+In Utdf 
+-password
+-email
+-term 
+
+
+*RTF : 
+-first import ReactiveFormModule from angular forms library.
+
+FormGroup Class : it will hold status and data of all form control 
+FormControl class : it will hold status and value of individual input control 
+
+*Services : in angular Service is reusable code which we can inject in any component if it required.
+           -it is nothing but class with extra power
+           -we can share data from server to multiple component
+           -we can write bussiness logic in it. 
+           -we can perform external communication(we can connect with database by calling api)
+
+-how to create 
+ng generate service serviceName
+
+ng g service shared/services/myservice
+
+
+DI(dependency Injection) : it is patter or mechanism to insert code in another component.
+
+create component with name serverData in component and display it output on browser.
+ng g c components/serviceData
+
+
+*Rest Fake API : 
+
+*how to install json 
+npm i -g json-server
+*we create json database 
+
+*how to upload jsondata to json server 
+
+ step1:cd src/app/shared/database
+ step2:json-server --watch -p 8888 db.json
+
+*How to make http request from angular to server 
+-first we have import provideHttpClient class in app.config.ts provider array
+
+*create new service 
+ng g service shared/services/dbService
+
+*to make http request from service to server first we have to create instance of 
+  httpClient Class in service constructor.
+
+ng g c CRUD/ProdustDash
+ng g c CRUD/ProductAdd
+ng g c CRUD/ProductEdit
+
+*we perfom get request successfully
+*we perfom delete request successfully
+
+*how to use font-awesome icon 
+
+step1: install font-awesome 
+      npm i font-awesome 
+step2: go to angular.json file and import font-awesome path in style array 
+        "font-awesome/css/font-awesome.min.css"
+step3: restart angular project 
+step4: go to font-aweome official website 
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

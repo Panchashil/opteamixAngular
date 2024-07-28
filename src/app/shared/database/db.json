@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "pname": "Laptop",
+      "pcompany": "Hp",
+      "pprice": 58000,
+      "address": "Pune"
+    },
+    {
+      "id": 105,
+      "pname": "Adaptor",
+      "pcompany": "Macro",
+      "pprice": 3000,
+      "address": "Chennai"
+    },
+    {
+      "pname": "Remote",
+      "pcompany": "LG",
+      "pprice": "500",
+      "address": "Pune",
+      "id": 106
+    },
+    {
+      "pname": "Mobile",
+      "pcompany": "oppo",
+      "pprice": "35000",
+      "address": "mumbai",
+      "id": 107
+    },
+    {
+      "pname": "watch",
+      "pcompany": "sonata",
+      "pprice": "35000",
+      "address": "nagpur",
+      "id": 108
+    },
+    {
+      "pname": "test1213",
+      "pcompany": "test123",
+      "pprice": "tesyt123",
+      "address": "test123",
+      "id": 109
+    },
+    {
+      "pname": "Remote",
+      "pcompany": "LG",
+      "pprice": "test",
+      "address": "demo123",
+      "id": 110
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "uid": "admin@gmail.com",
+      "pass": "admin@123"
+    },
+    {
+      "id": 2,
+      "uid": "king@gmail.com",
+      "pass": "king@123"
+    },
+    {
+      "id": 3,
+      "uid": "hero@gmail.com",
+      "pass": "hero@123"
+    }
+  ]
+}

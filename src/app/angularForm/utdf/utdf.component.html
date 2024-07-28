@@ -1,0 +1,49 @@
+<p>utdf works!</p>
+
+
+  <form  #utdf="ngForm" (ngSubmit)="getData(utdf.value)">
+    <div class="row">
+     <div class="col-sm-6"> 
+        <label class="form-label">Enter User Name :</label>
+        <input type="text" name="username" class="form-control"  #refuname="ngModel" pattern="^[a-zA-Z]{3,15}$"  [(ngModel)]="username" required>
+    <!-- {{refuname.className}} -->
+       <div class="alert alert-danger" *ngIf="refuname.invalid && refuname.touched">
+        <div *ngIf="refuname.hasError('required')">this field is required</div>  
+        <div *ngIf="refuname.hasError('pattern')">user name must contain only character min-3 and max-15</div>  
+       </div>
+    </div>
+    <div class="col-sm-6"> 
+      <label class="form-label">Enter User Password :</label>
+      <input type="text" name="userpass" class="form-control"  #refupass="ngModel" pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$"  [(ngModel)]="userpass" required>
+  <!-- {{refuname.className}} -->
+     <div class="alert alert-danger" *ngIf="refupass.invalid && refupass.touched">
+      <div *ngIf="refupass.hasError('required')">this field is required</div>  
+      <div *ngIf="refupass.hasError('pattern')">Password must contain 1 special character,1 Capital letter,1 number password length must be 6</div>  
+      </div>
+   </div>
+   <div class="col-sm-6"> 
+    <label class="form-label">Enter User Email :</label>
+    <input type="text" name="useremail" class="form-control"  #refemail="ngModel" pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$"  [(ngModel)]="useremail" required>
+   <div class="alert alert-danger" *ngIf="refemail.invalid && refemail.touched">
+    <div *ngIf="refemail.hasError('required')">this field is required</div>  
+    <div *ngIf="refemail.hasError('pattern')">Email id must be in proper formate</div>  
+    </div>
+ </div>
+ <div class="col-sm-6"> 
+  <label class="form-label-check mt-5">
+    <input type="checkbox" name="term" class="form-check-input"  #refterm="ngModel"  [(ngModel)]="term" required>
+    I Accept Term And Condition
+      <div class="alert alert-danger" *ngIf="refterm.invalid && refterm.touched">
+        <div *ngIf="refterm.hasError('required')">this field is required</div>   
+      </div>
+  </label> 
+</div>
+<div class="col-sm-6">
+  <button type="submit" class="btn btn-primary mt-3" [disabled]="utdf.invalid">Submit</button>
+</div>
+</div>
+ </form>
+
+
+
+

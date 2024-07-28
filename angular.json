@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "bootstrap/dist/css/bootstrap.min.css"
+              "bootstrap/dist/css/bootstrap.min.css",
+              "font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",

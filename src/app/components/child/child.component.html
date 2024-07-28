@@ -1,0 +1,9 @@
+<p>child works!</p>
+
+ <form class="box">
+
+     <p>{{parentData}}</p>
+    <label class="form-lable">Enter Your Message:</label><br>
+    <textarea name="pmsg" #cmsg></textarea><br>
+    <button type="button" (click)="getData(cmsg.value)" class="btn btn-outline-primary">send</button>
+</form>

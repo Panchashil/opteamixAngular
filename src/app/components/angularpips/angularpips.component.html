@@ -4,6 +4,48 @@
 <p>{{msg | uppercase }}</p>
 <p>{{msg | lowercase }}</p>
 <p>{{msg | titlecase }}</p>
+<p>{{msg | slice:5:20 }}</p>
+<!-- use of custome pipe  -->
+<div>{{2 |mycube}}</div>
+<br>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th><th>Gender</th><th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of friends">
+            <td>{{f.name |mygender: f.gender}}</td>
+            <td>{{f.gender}}</td>
+            <td>{{f.address}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<!-- json pipe  -->
+<p>{{employee | json}}</p>
+<!-- number pip  -->
+ <div>{{567 |number:'3.3-4'}}</div>
+ <div>{{0.567 |number:'3.3-4'}}</div>
+ <div>{{0.567 |number:'3.2-3'}}</div>
+ <p>{{0.567 |number:'3.1-2'}}</p>
+
+ <!-- currency pipe  -->
+<div>{{100 |currency}}</div>
+<div>{{100 |currency:"GBP"}}</div>
+<p>{{100 |currency:"INR"}}</p>
+
+<!-- date pipe  -->
+<p>{{dobj}}</p>
+<p>{{dobj|date}}</p>
+<p>{{dobj|date:'shortDate'}}</p>
+<p>{{dobj|date:'longDate'}}</p>
+<p>{{dobj|date:'dd-mm-yyyy'}}</p>
+<hr>
+
 
 
 

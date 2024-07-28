@@ -4,12 +4,13 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
 import { DirectiveComponent } from './components/directive/directive.component';
 import { ToggleimgComponent } from './Task/toggleimg/toggleimg.component';
 import { AngularpipsComponent } from './components/angularpips/angularpips.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,DatabindingComponent,DirectiveComponent,
-    ToggleimgComponent,AngularpipsComponent
+    ToggleimgComponent,AngularpipsComponent,ParentComponent
 
   ],
   templateUrl: './app.component.html',

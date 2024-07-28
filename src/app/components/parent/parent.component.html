@@ -1,0 +1,12 @@
+<p>parent works!</p>
+  
+<form class="box">
+    <p>{{childData}}</p>
+    <label class="form-lable">Enter Your Message:</label><br>
+    <textarea name="pmsg" #pmsg></textarea><br>
+    <button type="button" (click)="getData(pmsg.value)" class="btn btn-outline-primary">send</button>
+</form>
+<hr>
+<app-child  (eventObj)="childData=$event" [parentData]="pdata" ></app-child>
+
+
