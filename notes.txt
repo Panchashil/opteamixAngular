@@ -230,8 +230,155 @@ step1: install font-awesome
 step2: go to angular.json file and import font-awesome path in style array 
         "font-awesome/css/font-awesome.min.css"
 step3: restart angular project 
-step4: go to font-aweome official website 
-          
+step4: go to font-aweome official website  
+
+*we perfom post request successfully
+*we perfom put request successfully      
+====================================================
+2/8/24
+
+*concurrently : it is library which allows us to run multiple simulteniously.
+npmjs.com 
+
+step1: install concurrently 
+       npm i -g concurrently 
+step2: go to package.json file in script part write bellow command      
+        cd src/app/shared/database json-server --watch  -p 8888 db.json 
+
+        "start-dev": "concurrently \"ng serve\" \"cd src/app/shared/database && json-server --watch  -p 8888 db.json\""
+
+step3: terminate angular and json-derver 
+step4: npm run start-dev
+
+
+*ngxBootstrap 
+step1: install ngxBootstrap
+       ng add ngx-bootstrap
+
+
+ng g module app
+
+*webstorage : it is use to store user data on browser.
+1.local storage: it is use to store user data permanantly.
+2.session storage:  it is use to store user data for limited time. 
+
+localStorage.setItem("user3","hero")
+localStorage.getItem("user3")
+'hero'
+localStorage.removeItem("user2")
+localStorage.clear()
+
+*guard : in angular guard is use to prevent display component output view by writting its routing path name in browser url.
+-it return boolean result 
+-if it return true then it allows to display component view .
+-if it return false then it don't allows to display component view 
+
+ng g guard guardName 
+ng g guard shared/cust-guard/auth
+
+ng g guard shared/guard/auth --implements CanActivate
+========================================================================
+3/8/24
+
+*How to ngx bootstrap 
+*how to use modelpoup 
+*how to use carousel 
+
+
+*thiredparty pipe 
+ngx-pagination 
+npm i ngx-pagination
+
+-bootstrap: it provide us inbuilt class(js)
+ official website : getbootstrap.com
+-ngx-bootstrap: it it provide inbuilt class(ts)
+    official website :https://valor-software.com/ngx-bootstrap
+-angular material : it will inbuilt UI component for angular project.
+                official website : https://material.angular.io/
+
+how to install angular material 
+step1:ng add @angular/material
+step2: restart angular project 
+
+*how to use material component
+*How to use material ICON 
+
+
+
+Redux : -it is predictable state containr for javascript app.
+           or 
+        -it is use to store,mange and track state(data) for javascript app 
+      -redux work on three core principle 
+        1.Action: it is unique state which we are going to perform 
+        2.Reducer: it perform state transition depend on action and store 
+        3.Store: it is use to store data init. 
+
+*how to install ngrx 
+ng add @ngrx/store@latest 
+
+-app folder 
+      -state folder 
+          -counter folder 
+                counter.action.ts  file
+                counter.reducer.ts file
+          -app.store.ts file 
+
+
+Datalist 
+
+*How to create build file for angular project 
+ng build 
+
+*run build file on local server 
+angular-http-server 
+
+step1:npm install -g angular-http-server
+step2:cd dist/myangproject/browser
+step3:angular-http-server
+
+
+ done : poornima ,pravin , pooja aananda ,pooja k, girish,nithya ,rajeev,
+ ancilla : only available not responding 
+
+ =========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

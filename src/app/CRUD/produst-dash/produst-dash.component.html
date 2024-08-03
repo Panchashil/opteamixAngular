@@ -1,5 +1,19 @@
 <p>produst-dash works!</p>
 
+<carousel>
+    <slide>
+      <img [src]="dosa" alt="first slide" style="display: block; width: 100%; height: 350px;">
+    </slide>
+    <slide>
+      <img [src]="jalebi" alt="second slide" style="display: block; width: 100%; height: 350px;">
+    </slide>
+    <slide>
+      <img [src]="samosa" alt="third slide" style="display: block; width: 100%; height: 350px;">
+    </slide>
+  </carousel>
+
+<!-- carousel end here  -->
+<hr>
 <a routerLink="/maindashboard/productadd" class="btn btn-primary btn-sm mb-2"> 
     <i class="fa fa-plus" aria-hidden="true"></i> Add
 </a>
@@ -10,13 +24,16 @@
     </tr>
  </thead>
  <tbody>
-    <tr *ngFor="let product of productArray;let ind=index">
+    <tr *ngFor="let product of productArray | paginate: { itemsPerPage: 4, currentPage: p };let ind=index">
         <td>{{ind+1}}</td>
         <td>{{product.pname}}</td>
         <td>{{product.pcompany}}</td>
         <td>{{product.pprice}}</td>
         <td>{{product.address}}</td>
         <td>
+           <button type="button" (click)="openModal(template)" class="btn btn-outline-primary btn-sm">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+           </button> | 
             <a [routerLink]="['/maindashboard/productedit',product.id]" class="btn btn-outline-success btn-sm">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a> | 
@@ -24,6 +41,25 @@
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
             </button>
         </td>
+    
+     <!-- model poup code start here  -->
+     <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">{{product.pname}}</h4>
+          <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span>Product Id:</span> <strong>{{product.id}}</strong> <br>
+          <span>Product Name:</span> <strong>{{product.pname}}</strong><br>
+          <span>Product company:</span> <strong>{{product.pcompany}}</strong><br>
+          <span>Product Price:</span> <strong>{{product.pprice}}</strong><br>
+          <span>Product Address:</span> <strong>{{product.address}}</strong>
+        </div>
+      </ng-template>
+
     </tr>
  </tbody>
 </table>
+<pagination-controls style="float: right;" (pageChange)="p = $event"></pagination-controls>

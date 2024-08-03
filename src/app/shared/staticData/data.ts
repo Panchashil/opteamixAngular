@@ -8,7 +8,8 @@ let data={
     samosa1:"assets/samosa-1.jfif",
     samosa3:"assets/samosa-3.jfif",
     samosa2:"assets/samosa.jfif",
-    bigImg:"assets/big-img.jpg"
+    bigImg:"assets/big-img.jpg",
+    pageNotFound:"assets/404-Page.gif"
 }
 
 export default data;

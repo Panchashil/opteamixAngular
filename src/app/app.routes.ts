@@ -12,11 +12,13 @@ import { ServiceDataComponent } from './components/service-data/service-data.com
 import { ProdustDashComponent } from './CRUD/produst-dash/produst-dash.component';
 import { ProductAddComponent } from './CRUD/product-add/product-add.component';
 import { ProductEditComponent } from './CRUD/product-edit/product-edit.component';
+import { authGuard } from './shared/guard/auth.guard';
+import { DatalistComponent } from './components/datalist/datalist.component';
 
 export const routes: Routes = [
     {path:"",component:LoginComponent},
     {path:"login",component:LoginComponent},
-    {path:"maindashboard",component:MaindashboardComponent,children:[
+    {path:"maindashboard",component:MaindashboardComponent,canActivate:[authGuard], children:[
           // 2.default routing 
     // {path:"",component:DirectiveComponent},
     { path: "", redirectTo: "directive", pathMatch: "full" },
@@ -29,6 +31,7 @@ export const routes: Routes = [
     {path:"productdash",component:ProdustDashComponent},
     {path:"productadd",component:ProductAddComponent},
     {path:"productedit/:id",component:ProductEditComponent},
+    {path:"datalist",component:DatalistComponent},
     // 4.parameterize routing 
     { path: "parent/:id", component: ParentComponent },
   

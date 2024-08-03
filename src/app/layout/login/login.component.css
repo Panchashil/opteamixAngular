@@ -1,0 +1,12 @@
+
+
+.login-frm{
+    border: 2px solid blue;
+    width: 450px;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 7px;
+    position: relative;
+    top: 100px;
+}

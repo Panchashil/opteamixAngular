@@ -1,10 +1,16 @@
 
-
-
 <a routerLink="directive" class="btn btn-primary btn-sm">Directive</a>&nbsp;
 <a routerLink="mypipe" class="btn btn-primary btn-sm">Pipes</a>&nbsp;
 <a routerLink="parent" class="btn btn-primary btn-sm">Parent</a>&nbsp;
 <a routerLink="angform" class="btn btn-primary btn-sm">Forms</a>&nbsp;
 <a routerLink="servicedata" class="btn btn-primary btn-sm">SerData</a>&nbsp;
 <a routerLink="productdash" class="btn btn-outline-warning btn-sm">CRUD</a>&nbsp;
+<!-- <a routerLink="productdash" mat-raised-button>CRUD</a>&nbsp; -->
+ <a routerLink="datalist" mat-raised-button>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> Datalist
+ </a>&nbsp;
+
+<button type="button" class="btn btn-danger btn-sm" (click)="signOut()" style="float: right;">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>Signout
+</button>
 

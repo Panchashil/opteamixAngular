@@ -48,6 +48,27 @@
       "pprice": "test",
       "address": "demo123",
       "id": 110
+    },
+    {
+      "pname": "Desktop",
+      "pcompany": "HP",
+      "pprice": "30000",
+      "address": "Mumbai",
+      "id": 111
+    },
+    {
+      "pname": "UPS",
+      "pcompany": "Toshiba",
+      "pprice": "25000",
+      "address": "Hydrabad",
+      "id": 112
+    },
+    {
+      "pname": "Mouse",
+      "pcompany": "intel",
+      "pprice": "8000",
+      "address": "Chennai",
+      "id": 113
     }
   ],
   "users": [
